@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.seekers.wheresmystuff.HomeScreenActivity">
+
+    <TextView
+        android:text="Welcome to the application!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:id="@+id/homeWelcome"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/homeWelcome"
+        android:layout_marginBottom="39dp"
+        android:id="@+id/logout"
+        android:onClick="onLogoutPressed" />
+
+    <Button
+        android:id="@+id/lostButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:onClick="onLostClicked"
+        android:text="Lost"
+        android:layout_below="@+id/enterItems"
+        android:layout_alignStart="@+id/homeWelcome" />
+
+    <TextView
+        android:id="@+id/enterItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/lostButton"
+        android:layout_below="@+id/homeWelcome"
+        android:layout_marginTop="43dp"
+        android:text="Enter Lost Items"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/viewLostItemsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/lostButton"
+        android:layout_below="@+id/lostButton"
+        android:layout_marginTop="32dp"
+        android:text="View Lost Items"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <Button
+        android:id="@+id/viewLostItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/viewLostItemsLabel"
+        android:layout_below="@+id/viewLostItemsLabel"
+        android:layout_marginTop="19dp"
+        android:onClick="onViewLostItemsClicked"
+        android:text="View Items" />
+</RelativeLayout>
