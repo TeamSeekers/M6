@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class EnterLostItemActivity extends AppCompatActivity {
+public class EnterFoundItemActivity extends AppCompatActivity {
 
     private EditText enterNameOfItem;
     private EditText enterColorOfItem;
@@ -37,8 +37,8 @@ public class EnterLostItemActivity extends AppCompatActivity {
                 String name = enterNameOfItem.getText().toString();
                 String color = enterColorOfItem.getText().toString();
                 String description = enterDescriptionOfItem.getText().toString();
-                LostItem newLostItem = new LostItem(name, color, description);
-                WelcomeScreenActivity.lostItemList.getLostItemList().add(newLostItem);
+                FoundItem newFoundItem = new FoundItem(name, color, description);
+                WelcomeScreenActivity.foundItemList.getFoundItemList().add(newFoundItem);
                 finish();
             }
         });

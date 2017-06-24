@@ -43,14 +43,13 @@
         android:layout_alignStart="@+id/passwordLabel" />
 
     <Button
-        android:text="Enter"
+        android:id="@+id/enterLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/password"
         android:layout_alignStart="@+id/password"
+        android:layout_below="@+id/password"
         android:layout_marginTop="36dp"
-        android:id="@+id/enterLogin"
-        android:onClick="onEnterPressed" />
+        android:text="Enter" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -64,14 +63,13 @@
         android:layout_alignStart="@+id/usernameLabel" />
 
     <Button
-        android:text="Cancel"
+        android:id="@+id/cancelLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/enterLogin"
         android:layout_marginEnd="34dp"
         android:layout_marginTop="32dp"
-        android:id="@+id/cancelLogin"
-        android:layout_below="@+id/enterLogin"
-        android:layout_alignParentEnd="true"
-        android:onClick="onCancelPressed" />
+        android:text="Cancel" />
 
 </RelativeLayout>

@@ -14,6 +14,7 @@ public class WelcomeScreenActivity extends AppCompatActivity {
     private Button registration;
     public static PersonList personList;
     public static LostItemList lostItemList;
+    public static FoundItemList foundItemList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,15 +24,20 @@ public class WelcomeScreenActivity extends AppCompatActivity {
         registration = (Button) findViewById(R.id.registration);
         personList = new PersonList();
         lostItemList = new LostItemList();
-    }
-
-    protected void onLoginPressed(View view){
-        Intent intent = new Intent(WelcomeScreenActivity.this, LoginScreenActivity.class);
-        startActivity(intent);
-    }
-
-    protected void onRegistrationPressed(View view) {
-        Intent intent = new Intent(WelcomeScreenActivity.this, RegistrationScreenActivity.class);
-        startActivity(intent);
+        foundItemList = new FoundItemList();
+        registration.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WelcomeScreenActivity.this, RegistrationScreenActivity.class);
+                startActivity(intent);
+            }
+        });
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WelcomeScreenActivity.this, LoginScreenActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

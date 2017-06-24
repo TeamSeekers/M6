@@ -15,7 +15,7 @@ import org.w3c.dom.Text;
 
 import java.util.List;
 
-public class LostItemsListActivity extends AppCompatActivity {
+public class FoundItemsListActivity extends AppCompatActivity {
 
     private ListView itemsList;
     private ArrayAdapter adapter;
@@ -26,7 +26,7 @@ public class LostItemsListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lost_items_list);
         itemsList = (ListView) findViewById(R.id.itemsList);
-        adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, WelcomeScreenActivity.lostItemList.getLostItemList());
+        adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, WelcomeScreenActivity.foundItemList.getFoundItemList());
         itemsList.setAdapter(adapter);
         home = (Button) findViewById(R.id.backToHome);
 

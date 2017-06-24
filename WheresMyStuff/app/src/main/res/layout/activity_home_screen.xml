@@ -24,49 +24,84 @@
         android:text="Logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/homeWelcome"
-        android:layout_marginBottom="39dp"
+        android:layout_marginBottom="11dp"
         android:id="@+id/logout"
-        android:onClick="onLogoutPressed" />
+        android:onClick="onLogoutPressed"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:id="@+id/lostButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:onClick="onLostClicked"
         android:text="Lost"
         android:layout_below="@+id/enterItems"
-        android:layout_alignStart="@+id/homeWelcome" />
+        android:layout_alignStart="@+id/enterItems"
+        android:layout_marginTop="10dp" />
 
     <TextView
         android:id="@+id/enterItems"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/lostButton"
+        android:layout_alignStart="@+id/homeWelcome"
         android:layout_below="@+id/homeWelcome"
-        android:layout_marginTop="43dp"
+        android:layout_marginTop="16dp"
         android:text="Enter Lost Items"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
     <TextView
         android:id="@+id/viewLostItemsLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/lostButton"
-        android:layout_below="@+id/lostButton"
-        android:layout_marginTop="32dp"
         android:text="View Lost Items"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_below="@+id/lostButton"
+        android:layout_alignStart="@+id/lostButton"
+        android:layout_marginTop="18dp" />
 
     <Button
         android:id="@+id/viewLostItems"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/viewLostItemsLabel"
-        android:layout_below="@+id/viewLostItemsLabel"
-        android:layout_marginTop="19dp"
         android:onClick="onViewLostItemsClicked"
+        android:text="View Items"
+        android:layout_below="@+id/viewLostItemsLabel"
+        android:layout_alignStart="@+id/viewLostItemsLabel"
+        android:layout_marginTop="15dp" />
+
+    <Button
+        android:id="@+id/enterFoundItemsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Found"
+        android:layout_below="@+id/foundItemsLabel"
+        android:layout_alignStart="@+id/foundItemsLabel" />
+
+    <TextView
+        android:id="@+id/foundItemsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/viewLostItems"
+        android:layout_below="@+id/viewLostItems"
+        android:layout_marginTop="13dp"
+        android:text="Enter Found Items"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/foundlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/logout"
+        android:layout_alignStart="@+id/enterFoundItemsButton"
+        android:layout_marginBottom="51dp"
+        android:text="View Found Items"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <Button
+        android:id="@+id/viewFoundItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/logout"
+        android:layout_alignStart="@+id/foundlabel"
         android:text="View Items" />
 </RelativeLayout>

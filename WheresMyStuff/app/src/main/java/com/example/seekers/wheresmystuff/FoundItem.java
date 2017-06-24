@@ -1,15 +1,15 @@
 package com.example.seekers.wheresmystuff;
 
 /**
- * Created by pritshah on 6/22/17.
+ * Created by pritshah on 6/24/17.
  */
 
-public class LostItem extends Item {
+public class FoundItem {
     private String name;
     private String color;
     private String description;
 
-    public LostItem(String name, String color, String description) {
+    public FoundItem(String name, String color, String description) {
         this.name = name;
         this.color = color;
         this.description = description;
