@@ -9,6 +9,10 @@ public class LostItem extends Item {
     private String color;
     private String description;
 
+    public LostItem() {
+
+    }
+
     public LostItem(String name, String color, String description) {
         this.name = name;
         this.color = color;

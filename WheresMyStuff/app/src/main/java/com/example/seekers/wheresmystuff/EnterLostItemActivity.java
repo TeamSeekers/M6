@@ -13,7 +13,6 @@ public class EnterLostItemActivity extends AppCompatActivity {
     private EditText enterDescriptionOfItem;
     private Button cancelEnter;
     private Button enterFoundItem;
-    private static int lostItemCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +39,7 @@ public class EnterLostItemActivity extends AppCompatActivity {
                 String description = enterDescriptionOfItem.getText().toString();
                 LostItem newLostItem = new LostItem(name, color, description);
                 WelcomeScreenActivity.lostItemList.getLostItemList().add(newLostItem);
-                WelcomeScreenActivity.myRef.child("LostItem" + lostItemCount).setValue(newLostItem);
-                lostItemCount++;
+                WelcomeScreenActivity.myRef.child("LostItems").child(name + " : " + description).setValue(newLostItem);
                 finish();
             }
         });

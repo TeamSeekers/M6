@@ -12,4 +12,6 @@ public abstract class Person {
     public abstract String getAccountType();
 
     public abstract String getPassword();
+
+    public abstract String toString();
 }

@@ -13,7 +13,6 @@ public class EnterFoundItemActivity extends AppCompatActivity {
     private EditText enterDescriptionOfItem;
     private Button cancelEnter;
     private Button enterFoundItem;
-    private static int foundItemCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +39,7 @@ public class EnterFoundItemActivity extends AppCompatActivity {
                 String description = enterDescriptionOfItem.getText().toString();
                 FoundItem newFoundItem = new FoundItem(name, color, description);
                 WelcomeScreenActivity.foundItemList.getFoundItemList().add(newFoundItem);
-                WelcomeScreenActivity.myRef.child("FoundItem" + foundItemCount).setValue(newFoundItem);
-                foundItemCount++;
+                WelcomeScreenActivity.myRef.child("FoundItems").child(name + " : " + description).setValue(newFoundItem);
                 finish();
             }
         });

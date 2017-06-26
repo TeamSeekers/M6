@@ -12,6 +12,10 @@ public class Admin extends Person {
     private String password;
     private String accountType;
 
+    public Admin() {
+
+    }
+
     public Admin(String name, String username, String password, String accountType) {
         this.name = name;
         this.username = username;
@@ -33,6 +37,10 @@ public class Admin extends Person {
 
     public String getPassword() {
         return password;
+    }
+
+    public String toString() {
+        return "Name: " + this.name + " Account Type: " + this.accountType;
     }
 
 }

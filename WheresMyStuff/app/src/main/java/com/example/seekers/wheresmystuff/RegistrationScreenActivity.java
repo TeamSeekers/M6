@@ -31,7 +31,6 @@ public class RegistrationScreenActivity extends AppCompatActivity {
     private RadioButton userAccountType;
     private RadioButton adminAccountType;
     private Button cancel;
-    public static int personCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,58 +48,24 @@ public class RegistrationScreenActivity extends AppCompatActivity {
         registrationEnter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatabaseReference myRef = null;
                 String account = "";
                 String newUserName = enterUsername.getText().toString();
                 String newPassword = enterPassword.getText().toString();
-
-//                WelcomeScreenActivity.myRef.child("Person").addValueEventListener(new ValueEventListener() {
-//                    @Override
-//                    public void onDataChange(DataSnapshot dataSnapshot) {
-//
-//                        for(DataSnapshot snap: dataSnapshot.getChildren()) {
-//                            Person person1 = snap.getValue(Person.class);
-//                            User user1 = new User(person1.getName(), person1.getUsername(), person1.getPassword(), "User");
-//                            Admin admin1 = new Admin(person1.getName(), person1.getUsername(), person1.getPassword(), "Admin");
-//                            if (person1.getAccountType().equals("User")) {
-//                                if (person1 != null) {
-//                                    WelcomeScreenActivity.personList.getPersonList().put(user1.getPassword(), user1);
-//                                    personCount++;
-//                                }
-//                            } else {
-//                                if (person1 != null) {
-//                                    WelcomeScreenActivity.personList.getPersonList().put(admin1.getPassword(), admin1);
-//                                    personCount++;
-//                                }
-//                            }
-//                        }
-//                        Log.d("person count", String.valueOf(personCount));
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(DatabaseError databaseError) {
-//
-//                    }
-//                });
 
                 if (userAccountType.isChecked()) {
                     account = "User";
                     User newUser = new User(enterName.getText().toString(),
                             newUserName, newPassword, account);
-                    WelcomeScreenActivity.myRef.child("Person" + personCount).setValue(newUser);
-                    personCount++;
+                    WelcomeScreenActivity.myRef.child("Users").child(newUserName).setValue(newUser);
                     WelcomeScreenActivity.personList.getPersonList().put(newUser.getPassword(), newUser);
-//                    Log.d("person list after user", String.valueOf(WelcomeScreenActivity.personList.getPersonList().size()));
                     showAlert();
                     finish();
                 } else {
                     account = "Admin";
                     Admin newAdmin = new Admin(enterName.getText().toString(),
                             newUserName, newPassword, account);
-                    WelcomeScreenActivity.myRef.child("Person" + personCount).setValue(newAdmin);
-                    personCount++;
+                    WelcomeScreenActivity.myRef.child("Admins").child(newUserName).setValue(newAdmin);
                     WelcomeScreenActivity.personList.getPersonList().put(newAdmin.getPassword(), newAdmin);
-//                    Log.d("person list after admin", String.valueOf(WelcomeScreenActivity.personList.getPersonList().size()));
                     showAlert();
                     finish();
                 }

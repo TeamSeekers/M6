@@ -39,5 +39,7 @@ public class User extends Person {
         return password;
     }
 
-
+    public String toString() {
+        return "Name: " + this.name + " Account Type: " + this.accountType;
+    }
 }
