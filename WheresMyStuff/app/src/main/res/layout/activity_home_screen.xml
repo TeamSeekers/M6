@@ -19,7 +19,8 @@
         android:layout_marginTop="26dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        tools:layout_constraintLeft_creator="1" />
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintHorizontal_bias="0.306" />
 
     <Button
         android:text="Logout"
@@ -33,7 +34,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewFoundItems"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="51dp"
+        android:layout_marginBottom="52dp" />
 
     <Button
         android:id="@+id/lostButton"
@@ -88,10 +91,11 @@
         android:layout_height="wrap_content"
         android:text="Found"
         tools:layout_constraintTop_creator="1"
-        android:layout_marginTop="9dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@+id/foundItemsLabel"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/foundItemsLabel" />
+        app:layout_constraintLeft_toLeftOf="@+id/foundItemsLabel"
+        android:layout_marginLeft="0dp" />
 
     <TextView
         android:id="@+id/foundItemsLabel"
@@ -100,10 +104,11 @@
         android:text="Enter Found Items"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         tools:layout_constraintTop_creator="1"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintTop_toBottomOf="@+id/viewLostItems"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/viewLostItems" />
+        app:layout_constraintLeft_toLeftOf="@+id/viewLostItems"
+        android:layout_marginLeft="0dp" />
 
     <TextView
         android:id="@+id/foundlabel"
@@ -114,7 +119,7 @@
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toTopOf="@+id/viewFoundItems"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="18dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintLeft_toLeftOf="@+id/viewFoundItems"
         android:layout_marginLeft="0dp" />
 
@@ -128,7 +133,58 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="@+id/viewLostItems"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="139dp"
+        android:layout_marginBottom="128dp"
         app:layout_constraintLeft_toLeftOf="@+id/enterFoundItemsButton"
         app:layout_constraintHorizontal_bias="0.0" />
+
+    <TextView
+        android:id="@+id/searchLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Lost Items"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginEnd="39dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="157dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/foundSearchLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Found Items"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/searchFoundItemsButton"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="21dp" />
+
+    <Button
+        android:id="@+id/searchLostItemsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="21dp"
+        app:layout_constraintTop_toBottomOf="@+id/searchLabel"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/searchLabel" />
+
+    <Button
+        android:id="@+id/searchFoundItemsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/searchLostItemsButton"
+        android:layout_marginTop="70dp"
+        app:layout_constraintTop_toBottomOf="@+id/searchLostItemsButton"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/searchLostItemsButton" />
 </android.support.constraint.ConstraintLayout>

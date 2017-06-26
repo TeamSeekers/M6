@@ -15,7 +15,7 @@ public class LostItem extends Item {
         this.description = description;
     }
 
-    public String toString() {
+    public String getName() {
         return this.name;
     }
 
@@ -25,5 +25,9 @@ public class LostItem extends Item {
 
     public String getDescription() {
         return this.description;
+    }
+
+    public String toString() {
+        return "Name: " + this.name + " Color: " + this.color + " Description: " + this.description;
     }
 }

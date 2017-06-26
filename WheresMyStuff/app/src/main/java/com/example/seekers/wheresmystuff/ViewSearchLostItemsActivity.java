@@ -7,22 +7,23 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
-public class FoundItemsListActivity extends AppCompatActivity {
+public class ViewSearchLostItemsActivity extends AppCompatActivity {
 
-    private ListView itemsList;
+    private Button back;
     private ArrayAdapter adapter;
-    private Button home;
+    private ListView itemsList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_found_items_list);
-        itemsList = (ListView) findViewById(R.id.itemsList);
-        adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, WelcomeScreenActivity.foundItemList.getFoundItemList());
-        itemsList.setAdapter(adapter);
-        home = (Button) findViewById(R.id.backToHomeSearch);
+        setContentView(R.layout.activity_view_search_lost_items);
 
-        home.setOnClickListener(new View.OnClickListener() {
+        itemsList = (ListView) findViewById(R.id.lostItemsListSearch);
+        back = (Button) findViewById(R.id.backToHomeSearch);
+        adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, SearchLostItemsActivity.lostSearch);
+        itemsList.setAdapter(adapter);
+
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();

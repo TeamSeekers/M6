@@ -4,21 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.seekers.wheresmystuff.EnterLostItemActivity">
+    tools:context="com.example.seekers.wheresmystuff.EnterFoundItemActivity">
 
     <TextView
-        android:id="@+id/EnterLostItemLabel"
+        android:id="@+id/EnterFoundItemLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter Lost Item"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="66dp"
-        tools:layout_constraintLeft_creator="1"
+        android:text="Enter Found Item"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <TextView
         android:id="@+id/nameOfItemLabel"
@@ -38,17 +38,17 @@
         android:id="@+id/enterNameOfItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
         android:ems="10"
         android:inputType="textLongMessage|textPersonName"
-        android:text="Lost Item"
-        tools:layout_constraintTop_creator="1"
-        android:layout_marginTop="21dp"
+        android:text="Found Item"
+        app:layout_constraintLeft_toLeftOf="@+id/nameOfItemLabel"
         app:layout_constraintTop_toBottomOf="@+id/nameOfItemLabel"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/nameOfItemLabel" />
+        tools:layout_constraintTop_creator="1" />
 
     <Button
-        android:id="@+id/enterFoundItemButton"
+        android:id="@+id/enterLostItemButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onEnterLostItemButtonClicked"
@@ -69,9 +69,9 @@
         android:layout_marginStart="56dp"
         android:onClick="onCancelEnterItemClicked"
         android:text="Cancel"
-        app:layout_constraintBottom_toBottomOf="@+id/enterFoundItemButton"
+        app:layout_constraintBottom_toBottomOf="@+id/enterLostItemButton"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/enterFoundItemButton"
+        app:layout_constraintTop_toTopOf="@+id/enterLostItemButton"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1"
@@ -121,7 +121,7 @@
         tools:layout_constraintTop_creator="1" />
 
     <EditText
-        android:id="@+id/enterLostItemDescription"
+        android:id="@+id/enterFoundItemDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="54dp"

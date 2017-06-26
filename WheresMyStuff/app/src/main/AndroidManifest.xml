@@ -21,7 +21,11 @@
         <activity android:name=".EnterLostItemActivity" />
         <activity android:name=".LostItemsListActivity" />
         <activity android:name=".EnterFoundItemActivity" />
-        <activity android:name=".FoundItemsListActivity"></activity>
+        <activity android:name=".FoundItemsListActivity" />
+        <activity android:name=".SearchLostItemsActivity" />
+        <activity android:name=".SearchFoundItemsActivity" />
+        <activity android:name=".ViewSearchLostItemsActivity" />
+        <activity android:name=".ViewSearchFoundItemsActivity"></activity>
     </application>
 
 </manifest>

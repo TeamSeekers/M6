@@ -13,16 +13,17 @@ public class EnterLostItemActivity extends AppCompatActivity {
     private EditText enterDescriptionOfItem;
     private Button cancelEnter;
     private Button enterFoundItem;
+    private static int lostItemCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enter_lost_item);
         enterNameOfItem = (EditText) findViewById(R.id.enterNameOfItem);
-        enterColorOfItem = (EditText) findViewById(R.id.enterColor);
-        enterDescriptionOfItem = (EditText) findViewById(R.id.enterFoundItemDescription);
+        enterColorOfItem = (EditText) findViewById(R.id.enterLostColor);
+        enterDescriptionOfItem = (EditText) findViewById(R.id.enterLostItemDescription);
         cancelEnter = (Button) findViewById(R.id.cancelEnterItem);
-        enterFoundItem = (Button) findViewById(R.id.enterFoundItemButton);
+        enterFoundItem = (Button) findViewById(R.id.enterLostItemButton);
 
         cancelEnter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +40,8 @@ public class EnterLostItemActivity extends AppCompatActivity {
                 String description = enterDescriptionOfItem.getText().toString();
                 LostItem newLostItem = new LostItem(name, color, description);
                 WelcomeScreenActivity.lostItemList.getLostItemList().add(newLostItem);
+                WelcomeScreenActivity.myRef.child("LostItem" + lostItemCount).setValue(newLostItem);
+                lostItemCount++;
                 finish();
             }
         });

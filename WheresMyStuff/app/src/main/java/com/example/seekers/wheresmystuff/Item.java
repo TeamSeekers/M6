@@ -5,7 +5,8 @@ package com.example.seekers.wheresmystuff;
  */
 
 public abstract class Item {
-    public abstract String toString();
+    public abstract String getName();
     public abstract String getColor();
     public abstract String getDescription();
+    public abstract String toString();
 }

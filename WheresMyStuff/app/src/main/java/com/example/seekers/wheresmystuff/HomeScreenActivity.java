@@ -13,6 +13,8 @@ public class HomeScreenActivity extends AppCompatActivity {
     private Button logout;
     private Button foundButton;
     private Button viewFoundItems;
+    private Button searchLostItems;
+    private Button searchFoundItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,24 @@ public class HomeScreenActivity extends AppCompatActivity {
         logout = (Button) findViewById(R.id.logout);
         foundButton = (Button) findViewById(R.id.enterFoundItemsButton);
         viewFoundItems = (Button) findViewById(R.id.viewFoundItems);
+        searchLostItems = (Button) findViewById(R.id.searchLostItemsButton);
+        searchFoundItems = (Button) findViewById(R.id.searchFoundItemsButton);
+
+        searchFoundItems.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeScreenActivity.this, SearchFoundItemsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        searchLostItems.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeScreenActivity.this, SearchLostItemsActivity.class);
+                startActivity(intent);
+            }
+        });
 
         lostButton.setOnClickListener(new View.OnClickListener() {
             @Override
