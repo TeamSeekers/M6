@@ -14,6 +14,7 @@ public class FoundItemsListActivity extends AppCompatActivity {
     private Button home;
 
     @Override
+    @SuppressWarnings("unchecked")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_found_items_list);

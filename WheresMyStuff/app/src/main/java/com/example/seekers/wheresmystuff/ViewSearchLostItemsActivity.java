@@ -14,6 +14,7 @@ public class ViewSearchLostItemsActivity extends AppCompatActivity {
     private ListView itemsList;
 
     @Override
+    @SuppressWarnings("unchecked")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_search_lost_items);

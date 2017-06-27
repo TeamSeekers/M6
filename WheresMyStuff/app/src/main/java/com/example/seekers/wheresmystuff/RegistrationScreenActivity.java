@@ -48,7 +48,7 @@ public class RegistrationScreenActivity extends AppCompatActivity {
         registrationEnter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String account = "";
+                String account;
                 String newUserName = enterUsername.getText().toString();
                 String newPassword = enterPassword.getText().toString();
 

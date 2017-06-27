@@ -66,7 +66,7 @@ public class WelcomeScreenActivity extends AppCompatActivity {
                         }
                         DataSnapshot users = dataSnapshot.child("Users");
                         Iterable<DataSnapshot> usersChildren = users.getChildren();
-                        for (DataSnapshot user: adminsChildren) {
+                        for (DataSnapshot user: usersChildren) {
                             User u = user.getValue(User.class);
                             if (u != null) {
                                 personList.getPersonList().put(u.getPassword(), u);

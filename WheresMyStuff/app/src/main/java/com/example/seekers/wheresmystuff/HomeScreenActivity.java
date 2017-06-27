@@ -15,6 +15,7 @@ public class HomeScreenActivity extends AppCompatActivity {
     private Button viewFoundItems;
     private Button searchLostItems;
     private Button searchFoundItems;
+    private Button map;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,15 @@ public class HomeScreenActivity extends AppCompatActivity {
         viewFoundItems = (Button) findViewById(R.id.viewFoundItems);
         searchLostItems = (Button) findViewById(R.id.searchLostItemsButton);
         searchFoundItems = (Button) findViewById(R.id.searchFoundItemsButton);
+        map = (Button) findViewById(R.id.viewMapButton);
+
+        map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeScreenActivity.this, MapsActivity.class);
+                startActivity(intent);
+            }
+        });
 
         searchFoundItems.setOnClickListener(new View.OnClickListener() {
             @Override
