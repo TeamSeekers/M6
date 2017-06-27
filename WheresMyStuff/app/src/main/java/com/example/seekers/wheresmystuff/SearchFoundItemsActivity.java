@@ -46,7 +46,7 @@ public class SearchFoundItemsActivity extends AppCompatActivity {
                 ArrayList<FoundItem> temp = WelcomeScreenActivity.foundItemList.getFoundItemList();
                 for (int i = 0; i < temp.size(); i++) {
                     if (itemName.equals(temp.get(i).getName())) {
-                        if (foundSearch.contains(temp.get(i))) {
+                        if (!foundSearch.contains(temp.get(i))) {
                             foundSearch.add(temp.get(i));
                         }
                     }
