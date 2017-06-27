@@ -27,6 +27,7 @@ public class ViewSearchLostItemsActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SearchLostItemsActivity.lostSearch.clear();
                 finish();
             }
         });

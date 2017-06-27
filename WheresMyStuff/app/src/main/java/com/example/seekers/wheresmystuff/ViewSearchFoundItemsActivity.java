@@ -27,6 +27,7 @@ public class ViewSearchFoundItemsActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SearchFoundItemsActivity.foundSearch.clear();
                 finish();
             }
         });
