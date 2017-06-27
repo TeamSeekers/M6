@@ -46,7 +46,7 @@ public class SearchLostItemsActivity extends AppCompatActivity {
                 ArrayList<LostItem> temp = WelcomeScreenActivity.lostItemList.getLostItemList();
                 for (int i = 0; i < temp.size(); i++) {
                     if (itemName.equals(temp.get(i).getName())) {
-                        if (lostSearch.contains(temp.get(i))) {
+                        if (!lostSearch.contains(temp.get(i))) {
                             lostSearch.add(temp.get(i));
                         }
                     }
