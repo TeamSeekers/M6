@@ -22,6 +22,11 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.EventListener;
 
+/**
+ * This class represents the controller for the Registration Screen
+ * to handle the scenarios for a successful and unsuccessful registration.
+ *
+ */
 public class RegistrationScreenActivity extends AppCompatActivity {
 
     private EditText enterName;
@@ -80,6 +85,9 @@ public class RegistrationScreenActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Method to show that the registration was successful.
+     */
     protected void showAlert() {
         AlertDialog.Builder builder1 = new AlertDialog.Builder(RegistrationScreenActivity.this);
         builder1.setMessage("Registration Successful");

@@ -7,6 +7,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+/**
+ * A controller class that handles when someone would like to view all lost
+ * items.
+ */
 public class ViewSearchLostItemsActivity extends AppCompatActivity {
 
     private Button back;

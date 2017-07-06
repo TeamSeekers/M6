@@ -23,6 +23,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
 
+/**
+ * This class represents the controller for the Login Screen
+ * to handle the scenarios for a successful and unsuccessful login.
+ *
+ */
 public class LoginScreenActivity extends AppCompatActivity {
 
     private EditText username;

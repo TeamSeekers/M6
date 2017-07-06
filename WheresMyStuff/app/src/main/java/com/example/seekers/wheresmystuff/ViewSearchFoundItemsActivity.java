@@ -7,6 +7,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+/**
+ * A controller class that handles when a person would like to view all found items.
+ */
 public class ViewSearchFoundItemsActivity extends AppCompatActivity {
 
     private Button back;

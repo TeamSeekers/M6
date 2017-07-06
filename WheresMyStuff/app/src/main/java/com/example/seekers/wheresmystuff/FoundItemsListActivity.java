@@ -7,6 +7,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+/**
+ * The controller class that represents when someone needs to view a list
+ * of found items.
+ */
 public class FoundItemsListActivity extends AppCompatActivity {
 
     private ListView itemsList;

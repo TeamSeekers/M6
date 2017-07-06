@@ -7,6 +7,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+/**
+ * Controller class for when someone would like to view a list of lost
+ * items.
+ */
 public class LostItemsListActivity extends AppCompatActivity {
 
     private ListView itemsList;

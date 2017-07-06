@@ -9,6 +9,9 @@ import android.widget.EditText;
 
 import java.util.ArrayList;
 
+/**
+ * A controller class to search through a list of found items.
+ */
 public class SearchFoundItemsActivity extends AppCompatActivity {
 
     private Button search;

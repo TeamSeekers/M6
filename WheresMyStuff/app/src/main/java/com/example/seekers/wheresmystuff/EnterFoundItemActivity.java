@@ -6,6 +6,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+/**
+ * This class represents the controller to handle when someone has
+ * found an item and would like to post it
+ */
 public class EnterFoundItemActivity extends AppCompatActivity {
 
     private EditText enterNameOfItem;

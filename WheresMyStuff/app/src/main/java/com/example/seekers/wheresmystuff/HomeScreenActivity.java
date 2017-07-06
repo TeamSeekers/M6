@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ * The controller class that represents the home screen and all the options
+ * the application can do.
+ */
 public class HomeScreenActivity extends AppCompatActivity {
 
     private Button lostButton;
