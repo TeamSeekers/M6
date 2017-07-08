@@ -14,7 +14,7 @@ public class PersonList {
      * Default constructor to initialize the PersonList with an empty HashMap
      */
     public PersonList() {
-        personList = new HashMap<String, Person>();
+        personList = new HashMap<>();
     }
 
     /**

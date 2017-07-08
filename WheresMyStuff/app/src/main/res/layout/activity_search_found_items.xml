@@ -22,7 +22,6 @@
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
-        android:id="@+id/colorlabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Enter Color of Found Item"

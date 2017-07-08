@@ -7,7 +7,6 @@
     tools:context="com.example.seekers.wheresmystuff.EnterFoundItemActivity">
 
     <TextView
-        android:id="@+id/EnterFoundItemLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="66dp"
@@ -105,7 +104,6 @@
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
-        android:id="@+id/itemDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="56dp"

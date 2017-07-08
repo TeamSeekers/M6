@@ -1,7 +1,5 @@
 package com.example.seekers.wheresmystuff;
 
-import java.util.ArrayList;
-
 /**
  * Created by pritshah on 6/17/17.
  */

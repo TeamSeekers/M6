@@ -28,7 +28,7 @@ public class SearchLostItemsActivity extends AppCompatActivity {
         name = (EditText) findViewById(R.id.enterNameSearch);
         color = (EditText) findViewById(R.id.enterColorSearch);
         description = (EditText) findViewById(R.id.enterDescriptionSearch);
-        lostSearch = new ArrayList<LostItem>();
+        lostSearch = new ArrayList<>();
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override

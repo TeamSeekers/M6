@@ -1,10 +1,6 @@
 package com.example.seekers.wheresmystuff;
 
 /**
- * Created by pritshah on 6/22/17.
- */
-
-/**
  * A class that represents an item that has been lost.
  */
 public class LostItem extends Item {

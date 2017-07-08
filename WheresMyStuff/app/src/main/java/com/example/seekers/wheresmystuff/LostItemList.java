@@ -1,11 +1,6 @@
 package com.example.seekers.wheresmystuff;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-
-/**
- * Created by pritshah on 6/22/17.
- */
 
 /**
  * The class that represents a list of lost items.
@@ -17,7 +12,7 @@ public class LostItemList {
      * Constructer for LostItemList
      */
     public LostItemList() {
-        lostItemList = new ArrayList<LostItem>();
+        lostItemList = new ArrayList<>();
     }
 
     /**

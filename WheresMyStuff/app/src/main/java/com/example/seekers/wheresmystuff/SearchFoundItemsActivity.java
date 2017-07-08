@@ -31,7 +31,7 @@ public class SearchFoundItemsActivity extends AppCompatActivity {
         name = (EditText) findViewById(R.id.enterFoundNameSearch);
         color = (EditText) findViewById(R.id.enterFoundColorSearch);
         description = (EditText) findViewById(R.id.enterFoundDescriptionSearch);
-        foundSearch = new ArrayList<FoundItem>();
+        foundSearch = new ArrayList<>();
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
